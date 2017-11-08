@@ -3,17 +3,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { MaterialModule } from '@app/material';
+import { RoutingModule } from '@app/routing';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { UnderConstructionDialogComponent } from './components/under-construction-dialog/under-construction-dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidenavComponent,
+    UnderConstructionDialogComponent
+  ],
+  entryComponents: [
+    UnderConstructionDialogComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
