@@ -4,7 +4,7 @@
 
 @include mat-core();
 
-$app-primary: mat-palette($mat-blue-grey, 800);
+$app-primary: mat-palette($mat-grey, 800);
 $app-accent:  mat-palette($mat-amber, A200, A100, A400);
 $app-warn:    mat-palette($mat-red, A700);
 $app-theme:   mat-light-theme($app-primary, $app-accent, $app-warn);
@@ -12,6 +12,11 @@ $app-theme:   mat-light-theme($app-primary, $app-accent, $app-warn);
 @include angular-material-theme($app-theme);
 
 /* Custom styles */
+
+.app-center {
+  justify-content: center;
+  align-items: center;
+}
 
 .app-full-width {
   width: 100%;
