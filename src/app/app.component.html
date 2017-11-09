@@ -23,7 +23,7 @@
   </div>
 </div>
 <div class="app-print">
-  <app-cv *ngIf="router.isActive('cv'); else notAllowed"></app-cv>
+  <app-cv *ngIf="router.isActive('cv', true); else notAllowed"></app-cv>
   <ng-template #notAllowed>
     <div class="text-center">
       <h1>Sorry, printing this page is not allowed.</h1>
