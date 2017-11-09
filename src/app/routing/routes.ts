@@ -18,11 +18,11 @@ export const routes: Route[] = [
   {
     path: 'cv',
     component: CvComponent
-  }
+  },
   {
     path: 'privacy-policy',
     component: PrivacyPolicyComponent
-  }
+  },
   {
     path: '**',
     component: NotFoundComponent

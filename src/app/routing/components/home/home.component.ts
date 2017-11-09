@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
-import { UnderConstructionDialogComponent } from '@app/components/under-construction-dialog/under-construction-dialog.component';
+import { UnderConstructionDialogComponent } from './under-construction-dialog/under-construction-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +10,11 @@ import { UnderConstructionDialogComponent } from '@app/components/under-construc
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private matDialog: MatDialog) { }
+  constructor(private matDialog: MatDialog) {
+    this.matDialog.open(UnderConstructionDialogComponent);
+  }
 
   ngOnInit() {
-    // this.matDialog.open(UnderConstructionDialogComponent);
   }
 
 }

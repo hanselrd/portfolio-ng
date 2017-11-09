@@ -31,13 +31,16 @@ $app-theme:   mat-light-theme($app-primary, $app-accent, $app-warn);
 }
 
 /* Printer friendly */
-@media print {
-  body, html {
-    height: 100%;
-    overflow: visible !important;
-  }
+.app-print {
+  display: none;
+}
 
+@media print {
   .app-no-print {
     display: none;
+  }
+
+  .app-print {
+    display: block;
   }
 }
