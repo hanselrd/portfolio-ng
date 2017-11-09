@@ -2,6 +2,7 @@ import { Route } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 export const routes: Route[] = [
   {
@@ -13,6 +14,10 @@ export const routes: Route[] = [
     path: 'home',
     component: HomeComponent
   },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent
+  }
   {
     path: '**',
     component: NotFoundComponent

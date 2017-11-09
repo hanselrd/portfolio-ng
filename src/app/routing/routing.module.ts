@@ -8,6 +8,7 @@ import { MaterialModule } from '@app/material';
 
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   ],
   declarations: [
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PrivacyPolicyComponent
   ],
   exports: [
     RouterModule

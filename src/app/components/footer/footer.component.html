@@ -1,24 +1,24 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Footer</span>
-    <span class="app-spacer"></span>
-    <a mat-icon-button href="https://github.com/hanselrd" target="_blank" matTooltip="GitHub">
-      <i class="fa fa-github fa-2x"></i>
-    </a>
-    <a mat-icon-button href="https://facebook.com/" target="_blank" matTooltip="Facebook">
+  <mat-toolbar-row class="app-center">
+    <a mat-icon-button href="https://facebook.com/hansel.delacruz.14" target="_blank">
       <i class="fa fa-facebook fa-2x"></i>
     </a>
-    <a mat-icon-button href="https://twitter.com" target="_blank" matTooltip="Twitter">
-      <i class="fa fa-twitter fa-2x"></i>
+    <a mat-icon-button href="https://linkedin.com/in/hansel-de-la-cruz-532199144" target="_blank">
+      <i class="fa fa-linkedin fa-2x"></i>
+    </a>
+    <a mat-icon-button href="https://github.com/hanselrd" target="_blank">
+      <i class="fa fa-github fa-2x"></i>
     </a>
   </mat-toolbar-row>
-  <mat-toolbar-row></mat-toolbar-row>
   <mat-toolbar-row class="app-center">
     <small>
-      &copy; Copyright 2017
-      <strong>
-        <a href="https://github.com/hanselrd">Hansel De La Cruz</a>
-      </strong>
+      &copy; Copyright {{ date.getFullYear() }}
+      <strong><a routerLink="">Hansel De La Cruz</a></strong>
     </small>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="app-center">
+    <small><a routerLink="privacy-policy">Privacy Policy</a></small>
+    <small><a routerLink="sitemap">Sitemap</a></small>
+    <small><a routerLink="contact">Contact</a></small>
   </mat-toolbar-row>
 </mat-toolbar>

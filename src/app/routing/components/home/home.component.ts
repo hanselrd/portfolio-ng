@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private matDialog: MatDialog) { }
 
   ngOnInit() {
-    this.matDialog.open(UnderConstructionDialogComponent);
+    // this.matDialog.open(UnderConstructionDialogComponent);
   }
 
 }
