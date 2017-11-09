@@ -6,6 +6,7 @@ import { routes } from './routes';
 
 import { MaterialModule } from '@app/material';
 
+import { CvComponent } from './components/cv/cv.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
@@ -17,6 +18,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     MaterialModule
   ],
   declarations: [
+    CvComponent,
     HomeComponent,
     NotFoundComponent,
     PrivacyPolicyComponent

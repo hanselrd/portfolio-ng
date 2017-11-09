@@ -29,3 +29,15 @@ $app-theme:   mat-light-theme($app-primary, $app-accent, $app-warn);
 .app-spacer {
   flex: 1 1 auto;
 }
+
+/* Printer friendly */
+@media print {
+  body, html {
+    height: 100%;
+    overflow: visible !important;
+  }
+
+  .app-no-print {
+    display: none;
+  }
+}

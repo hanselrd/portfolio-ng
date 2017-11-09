@@ -1,19 +1,21 @@
 <div class="app" fxLayout="column" fxLayoutAlign="start stretch">
-  <mat-toolbar class="mat-elevation-z6 header" color="primary">
-    <mat-toolbar-row>
-      <button mat-icon-button (click)="appSidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span><strong>Hansel De La Cruz</strong></span>
-    </mat-toolbar-row>
-  </mat-toolbar>
+  <div class="app-no-print header">
+    <mat-toolbar class="mat-elevation-z6" color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="appSidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span><strong>Hansel De La Cruz</strong></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
   <mat-sidenav-container fxFlex>
     <div class="content" fxLayout="column">
-      <app-header></app-header>
-      <div fxFlex>
+      <app-header class="app-no-print"></app-header>
+      <div class="router" fxFlex>
         <router-outlet></router-outlet>
       </div>
-      <app-footer></app-footer>
+      <app-footer class="app-no-print"></app-footer>
     </div>
     <mat-sidenav #appSidenav>
       <app-sidenav></app-sidenav>
