@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-header [class.app-center]="center">
+  <mat-card-header *ngIf="title || subtitle" [class.app-center]="center">
     <mat-card-title [class.text-center]="center">
       <h1>
         <i *ngIf="faIcon && !matIcon" class="fa" [ngClass]="faIcon"></i>

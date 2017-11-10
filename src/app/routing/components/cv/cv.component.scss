@@ -1,13 +1,29 @@
-h3 {
+h1 {
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+h2 {
   font-weight: bold;
   font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  padding: 0;
+  margin: 5px;
 }
 
 li {
-  padding: 2px 0;
+  padding: 1px 0;
 }
 
 p {
   padding: 0;
+  margin: 0;
+}
+
+ul {
   margin: 0;
 }
