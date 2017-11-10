@@ -11,7 +11,7 @@ import { UnderConstructionDialogComponent } from './under-construction-dialog/un
 export class HomeComponent implements OnInit {
 
   constructor(private matDialog: MatDialog) {
-    this.matDialog.open(UnderConstructionDialogComponent);
+    // this.matDialog.open(UnderConstructionDialogComponent);
   }
 
   ngOnInit() {

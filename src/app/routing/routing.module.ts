@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './routes';
 
-import { MaterialModule } from '@app/material';
+import { SharedModule } from '@app/shared';
 
 import { CvComponent } from './components/cv/cv.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,7 +16,7 @@ import { UnderConstructionDialogComponent } from './components/home/under-constr
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-    MaterialModule
+    SharedModule
   ],
   declarations: [
     CvComponent,

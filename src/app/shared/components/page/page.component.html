@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header [class.app-center]="center">
+    <mat-card-title [class.text-center]="center">
+      <h1>
+        <i *ngIf="faIcon && !matIcon" class="fa" [ngClass]="faIcon"></i>
+        <mat-icon *ngIf="matIcon && !faIcon">{{ matIcon }}</mat-icon>
+        <strong>{{ title }}</strong>
+      </h1>
+    </mat-card-title>
+    <mat-card-subtitle [class.text-center]="center">
+      {{ subtitle }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content [class.text-center]="center">
+    <ng-content></ng-content>
+  </mat-card-content>
+</mat-card>

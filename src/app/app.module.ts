@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { MaterialModule } from '@app/material';
 import { RoutingModule } from '@app/routing';
+import { SharedModule } from '@app/shared';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -20,8 +20,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    RoutingModule
+    RoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
