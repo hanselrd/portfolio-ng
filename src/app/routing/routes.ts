@@ -13,18 +13,22 @@ export const routes: Route[] = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { title: 'Home' }
   },
   {
     path: 'cv',
-    component: CvComponent
+    component: CvComponent,
+    data: { title: 'Curriculum Vitae' }
   },
   {
     path: 'privacy-policy',
-    component: PrivacyPolicyComponent
+    component: PrivacyPolicyComponent,
+    data: { title: 'Privacy Policy' }
   },
   {
     path: '**',
-    component: NotFoundComponent
+    component: NotFoundComponent,
+    data: { title: 'Error 404' }
   }
 ];
