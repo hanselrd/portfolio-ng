@@ -24,7 +24,6 @@ import {
   imports: [
     CommonModule
   ],
-  declarations: [],
   exports: [
     FlexLayoutModule,
     MatButtonModule,

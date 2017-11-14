@@ -1,30 +1,30 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {
+  CoreModule,
+  AppComponent,
+  FooterComponent,
+  HeaderComponent,
+  SidenavComponent
+} from '@app/core';
 import { RoutingModule } from '@app/routing';
 import { SharedModule } from '@app/shared';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidenavComponent
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CoreModule,
     RoutingModule,
     SharedModule
   ],
-  providers: [
-    Title
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    SidenavComponent
   ],
   bootstrap: [AppComponent]
 })
