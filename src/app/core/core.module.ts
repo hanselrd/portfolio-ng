@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Title } from '@angular/platform-browser';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -18,10 +17,9 @@ import { AuthService } from './services/auth/auth.service';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule.enablePersistence(),
+    AngularFirestoreModule.enablePersistence()
   ],
   providers: [
-    Title,
     AuthService
   ]
 })
