@@ -1,3 +1,7 @@
 <app-page title="Home" subtitle="HomeComponent">
-  ...
+  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="google()">GOOGLE</button>
+  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="facebook()">FACEBOOK</button>
+  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="twitter()">TWITTER</button>
+  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="github()">GITHUB</button>
+  <button mat-raised-button *ngIf="(authService.authState | async)" (click)="authService.logOut()">LOG OUT</button>
 </app-page>
