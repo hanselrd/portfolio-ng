@@ -1,7 +1,18 @@
 <app-page title="Home" subtitle="HomeComponent">
-  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="google()">GOOGLE</button>
-  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="facebook()">FACEBOOK</button>
-  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="twitter()">TWITTER</button>
-  <button mat-raised-button *ngIf="!(authService.authState | async)" (click)="github()">GITHUB</button>
-  <button mat-raised-button *ngIf="(authService.authState | async)" (click)="authService.logOut()">LOG OUT</button>
+  <div *ngIf="(authService.authState | async); else guest">
+    <!-- {{ (authService.user.data | async) | json }} -->
+    <!-- {{ ((authService.user.data | async)?.status?.data | async)?.status }} -->
+    {{ (authService.user.data | async)?.id }}
+    <br>
+    {{ ((authService.user.data | async)?.status.data | async) | json }}
+    <br>
+    {{ !!(authService.user.data | async) }}
+    <button mat-raised-button color="primary" (click)="authService.logOut()">LOG OUT</button>
+  </div>
+  <ng-template #guest>
+    <button mat-raised-button color="primary" (click)="google()">GOOGLE</button>
+    <button mat-raised-button color="primary" (click)="facebook()">FACEBOOK</button>
+    <button mat-raised-button color="primary" (click)="twitter()">TWITTER</button>
+    <button mat-raised-button color="primary" (click)="github()">GITHUB</button>
+  </ng-template>
 </app-page>

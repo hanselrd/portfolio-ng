@@ -1,4 +1,10 @@
 <mat-toolbar color="primary">
+  <mat-toolbar-row *ngIf="(authService.authState | async)" class="app-center">
+    <small>
+      <a routerLink="">{{ (authService.user.data | async)?.displayName }}</a>
+      <i class="fa fa-circle text-success"></i>
+    </small>
+  </mat-toolbar-row>
   <mat-toolbar-row class="app-center">
     <a mat-icon-button href="https://facebook.com/hansel.delacruz.14" target="_blank">
       <i class="fa fa-facebook fa-2x"></i>

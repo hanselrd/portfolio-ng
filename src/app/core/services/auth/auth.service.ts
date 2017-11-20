@@ -8,12 +8,13 @@ import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 
+import { User } from '../../classes/user';
+
 @Injectable()
 export class AuthService {
 
   private _authState: Observable<firebase.User>;
-  // private _user: User;
-  private _user: firebase.User;
+  private _user: User;
   private _statusRef: firebase.database.Reference;
 
   constructor(private afAuth: AngularFireAuth,
@@ -37,8 +38,7 @@ export class AuthService {
       })
       .subscribe(auth => {
         if (auth) {
-          // this._user = new User(afs, auth);
-          this._user = auth;
+          this._user = new User(afDb, afs, auth);
         }
       });
   }
@@ -52,10 +52,24 @@ export class AuthService {
   }
 
   logInWithProvider(provider: firebase.auth.AuthProvider) {
-    console.log('provider:', provider.providerId);
     return this.afAuth.auth.signInWithPopup(provider)
       .then(auth => {
-        console.log('auth:', auth.user.toJSON());
+        let user = new User(this.afDb, this.afs, auth.user);
+        user.data.subscribe(data => {
+          if (data) {
+            data.ip = '0.0.0.0';
+            data.platform = window.navigator.platform;
+            data.providers = JSON.parse(JSON.stringify(auth.user.providerData));
+            User.update(this.afs, auth.user.uid, data);
+          } else {
+            data = {} as any;
+            data.displayName = provider.providerId;
+            data.ip = '0.0.0.0';
+            data.platform = window.navigator.platform;
+            data.providers = JSON.parse(JSON.stringify(auth.user.providerData));
+            User.set(this.afs, auth.user.uid, data);
+          }
+        });
       })
   }
 
